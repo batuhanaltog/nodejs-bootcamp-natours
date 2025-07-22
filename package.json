@@ -4,7 +4,8 @@
   "description": "Node, express and mongoDB tutorial",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/batuhanaltog/nodejs-bootcamp-natours#readme",
   "dependencies": {
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
