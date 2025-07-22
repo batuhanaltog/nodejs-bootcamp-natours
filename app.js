@@ -7,10 +7,6 @@ const userRouter = require('./routes/userRoutes');
 // Middlewares
 app.use(express.json())
 app.use((req, res, next) => {
-  console.log('Middleware triggered');
-  next();
-})
-app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   next();
 })
